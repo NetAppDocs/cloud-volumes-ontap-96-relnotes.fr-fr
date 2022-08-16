@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes 
+summary: 'Cloud Volumes ONTAP est disponible sous forme de système à un seul nœud dans Google Cloud Platform. Deux options de tarification sont disponibles : le paiement à l"utilisation ou le modèle BYOL (Bring Your Own License).' 
+---
+= Configurations prises en charge dans Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP est disponible sous forme de système à un seul nœud dans Google Cloud Platform. Deux options de tarification sont disponibles : le paiement à l'utilisation ou le modèle BYOL (Bring Your Own License).
+
+
+
+== Présentation du paiement à l'utilisation
+
+* Propose Cloud Volumes ONTAP avec trois options de licence : explore, Standard et Premium.
+* Une version d'essai gratuite de 30 jours est disponible pour le premier système Cloud Volumes ONTAP que vous déployez dans Google Cloud.
++
+** Toutes les heures ne font pas l'objet de frais logiciels, mais les frais d'infrastructure Google Cloud s'appliquent toujours (calcul, stockage et réseau).
+** À la fin de l'essai gratuit, vous serez facturé toutes les heures en fonction de la licence sélectionnée, https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager["tant que vous êtes abonné"^]. Si vous n'êtes pas abonné, le système s'arrête.
+
+
+* Les conversions de facturation PAYGO à BYOL ne sont pas prises en charge actuellement.
+* Le support technique de base est proposé, mais vous devez enregistrer et activer le numéro de série NetApp associé à votre système.
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-registering.html["Enregistrez les systèmes de paiement à l'utilisation dans Cloud Manager"^]
+
+
+
+
+
+== Présentation d'BYOL
+
+* Licence à un seul nœud avec options d'abonnement basées sur une période de 12 à 24 mois, et plus encore.
+* Le support est inclus pendant la durée de l'abonnement.
+* Vous pouvez acheter plusieurs licences pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 To de capacité.
++
+Par exemple, vous pouvez acheter deux licences pour allouer une capacité allant jusqu'à 736 To à Cloud Volumes ONTAP. Vous pouvez également acheter quatre licences pour obtenir jusqu'à 1.4 Pio.
+
+
+
+
+
+== Configurations prises en charge par licence
+
+Cloud Volumes ONTAP est disponible sous forme de système à un seul nœud dans Google Cloud Platform.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Découvrir | Standard | Premium | BYOL 
+
+
+| Types de machine pris en charge ^1^ | personnalisé-4-16384 | n1-standard-8 | n1-standard-32  a| 
+* personnalisé-4-16384
+* n1-standard-8
+* n1-standard-32
+
+
+
+
+| Types de disque pris en charge ^2^ 4+| Disques persistants zonés (SSD et standard) 
+
+
+| Tiering des données inactives vers le stockage objet | Non pris en charge 3+| Pris en charge 
+
+
+| Capacité système maximale (disques + stockage objet) | 2 To | 10 TO | 368 TO ^3^ | 368 To par licence ^3^ 
+|===
+Remarques :
+
+. Le type de machine personnalisé est doté de 4 CPU virtuels et de 16 Go de mémoire. Pour plus de détails sur les types de machines standard, reportez-vous à https://cloud.google.com/compute/docs/machine-types#standard_machine_types["Google Cloud Documentation : types de machines"^].
+. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
+. Les limites de disque vous empêchent d'atteindre la limite de capacité de 368 To en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de 368 To de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
++
+link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
+
+. Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+
+
+
+
+== Tailles de disque prises en charge
+
+Dans Google Cloud, un agrégat peut contenir jusqu'à 6 disques de même type et de même taille. Les tailles de disque suivantes sont prises en charge :
+
+* 100 GO
+* 500 GO
+* 1 To
+* 2 To
+* 4 TO
+* 8 TO
+* 16 TO
+

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-azure.html 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3 
+summary: Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure. 
+---
+= Restrictions connues dans Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure. N'oubliez pas de consulter également link:reference-limitations.html["Restrictions applicables dans tous les fournisseurs de cloud"].
+
+
+
+== Les nouveaux déploiements ne sont pas pris en charge
+
+Les nouveaux déploiements de Cloud Volumes ONTAP 9.6 ne sont plus pris en charge dans Azure. Vous devez déployer Cloud Volumes ONTAP 9.7.
+
+
+
+== Limitations de LA HAUTE DISPONIBILITÉ
+
+Les limites suivantes affectent les paires HA Cloud Volumes ONTAP dans Microsoft Azure :
+
+* NFSv4 n'est pas pris en charge. NFSv3 est pris en charge.
+* Les paires HA ne sont pas prises en charge dans certaines régions.
++
+https://cloud.netapp.com/cloud-volumes-global-regions["Consultez la liste des régions Azure prises en charge"^].
+
+
+
+
+
+== Le paiement à l'utilisation n'est pas disponible pour les partenaires de FST
+
+Si vous êtes un partenaire de fournisseur de solutions cloud Microsoft, vous ne pouvez pas déployer Cloud Volumes ONTAP Explore, Standard ou Premium car les abonnements avec paiement à l'utilisation ne sont pas disponibles pour les partenaires d'un FST. Vous devez acheter une licence et déployer Cloud Volumes ONTAP BYOL.

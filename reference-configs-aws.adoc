@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-aws.html 
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks 
+summary: Cloud Volumes ONTAP est disponible dans AWS en configurations PAYGO et BYOL. Vous avez le choix entre Explorer, Standard ou Premium. 
+---
+= Configurations prises en charge dans AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Deux options de tarification sont disponibles dans Cloud Volumes ONTAP AWS : le paiement à l'utilisation ou le modèle BYOL (où vous apportez votre propre licence). Le paiement basé sur l'utilisation vous permet de choisir parmi trois configurations : explore, Standard ou Premium.
+
+
+
+== Configurations prises en charge par licence
+
+Cloud Volumes ONTAP est disponible dans AWS en tant que système à un seul nœud et en tant que paire de nœuds haute disponibilité pour la tolérance aux pannes et la continuité de l'activité.
+
+La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Découvrir | Standard | Premium | BYOL 
+
+
+| Types d'instances EC2 pris en charge ^1^  a| 
+* m4.xlarge
+* m5.xlarge
+
+ a| 
+* m4.2xlarge
+* m5.2xlarge
+* r4.xlarge
+* r5.xlarge
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* c5d.18xlarge ^2,3^
+* m4,4xlarge
+* m5.4xlarge
+* m5d.mcd ^2,3^
+* r4.2xlarge
+* r5.2xlarge
+* r5d.2xlarge ^2^
+
+ a| 
+* c4.4xlarge
+* c4.8xlarge
+* c5.9xlarge
+* c5.18xlarge
+* c5d.4xlarge ^2^
+* c5d.9xlarge ^2^
+* c5d.18xlarge ^2,3^
+* m4.xlarge
+* m4.2xlarge
+* m4,4xlarge
+* m5.xlarge
+* m5.2xlarge
+* m5.4xlarge
+* m5d.mcd ^2,3^
+* r4.xlarge
+* r4.2xlarge
+* r5.xlarge
+* r5.2xlarge
+* r5d.2xlarge ^2^
+
+
+
+
+| Types de disque pris en charge ^4^ 4+| SSD à usage général (gp2) ^5^, SSD IOPS provisionnés (io1) et disques durs optimisés en termes de débit (st1) 
+
+
+| Tiering des données inactives vers S3 | Non pris en charge 3+| Pris en charge 
+
+
+| Capacité système maximale (disques + stockage objet) | 2 To | 10 To | 368 Tio ^5^ | 368 Tio par licence ^5^ 
+|===
+Remarques :
+
+. Lorsque vous choisissez un type d'instance EC2, vous pouvez indiquer s'il s'agit d'une instance partagée ou dédiée.
+. Ces types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Il est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache. link:reference-limitations-aws.html#flash-cache-limitations["En savoir plus >>"].
+. C5d.18XLarge et m5d.sbip sont prises en charge à partir de Cloud Volumes ONTAP 9.6 P3.
+. L'amélioration des performances d'écriture est activée lorsque les SSD sont utilisés avec Cloud Volumes ONTAP Standard, Premium et BYOL.
+. Les SSD gp3 ne sont pas pris en charge.
+. Dans certaines configurations haute disponibilité, les limites de disque vous empêchent d'atteindre la limite de capacité de 368 Tio en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de 368 Tio de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
+. Pour la prise en charge de chaque région AWS, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+
+
+
+
+== Tailles de disque prises en charge
+
+Dans AWS, un agrégat peut contenir jusqu'à 6 disques de même type et de même taille.
+
+[cols="3*"]
+|===
+| SSD polyvalents (gp2) | SSD IOPS provisionnés (io1) | Disques durs à débit optimisé (st1) 
+
+
+ a| 
+* 100 Gio
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 6 To
+* 8 To
+* 16 To
+
+ a| 
+* 100 Gio
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 6 To
+* 8 To
+* 16 To
+
+ a| 
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 6 To
+* 8 To
+* 16 To
+
+
+|===
