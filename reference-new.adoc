@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.6 comprend un certain nombre de nouvelles fonctio
 [role="lead"]
 Cloud Volumes ONTAP 9.6 comprend un certain nombre de nouvelles fonctionnalités et améliorations.
 
-D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de Cloud Manager. Voir la https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Notes de version de Cloud Manager"^] pour plus d'informations.
+D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de Cloud Manager. Voir la https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de version de Cloud Manager"^] pour plus d'informations.
 
 
 
@@ -53,7 +53,7 @@ Quelques nouveaux types d'instances EC2 sont désormais pris en charge avec Clou
 * m5d.mcd ^1,2^
 
 
-^1^ ces types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise comme _Flash cache_. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
+^1^ ces types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise comme _Flash cache_. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
 
 ^2^ ces types d'instance sont pris en charge par 9.6 P3 ou ultérieur.
 
@@ -120,7 +120,7 @@ https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-m
 
 Cloud Volumes ONTAP est maintenant disponible dans Google Cloud Platform (Google Cloud) lorsque vous apportez votre propre licence (BYOL). Une offre de paiement à l'utilisation est également disponible. La promotion offre des licences gratuites pour un nombre illimité de systèmes et expirera à la fin de septembre 2019.
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["Découvrez comment vous lancer dans Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html["Découvrez comment vous lancer dans Google Cloud"^]
 * link:reference-configs-gcp.html["Affichez les configurations prises en charge"]
 
 
@@ -167,7 +167,7 @@ Pour rejoindre la présentation privée, envoyez une demande à l'adresse ng-Clo
 
 Le Tiering des données est désormais pris en charge avec les paires HA Cloud Volumes ONTAP dans Microsoft Azure. Le Tiering des données permet le Tiering automatisé des données inactives vers le stockage Blob à faible coût.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Découvrez comment configurer le Tiering des données dans Cloud Manager"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Découvrez comment configurer le Tiering des données dans Cloud Manager"^].
 
 
 

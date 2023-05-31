@@ -30,7 +30,7 @@ Cloud Volumes ONTAP est disponible sous forme de système à un seul nœud dans 
 * Les conversions de facturation PAYGO à BYOL ne sont pas prises en charge actuellement.
 * Le support technique de base est proposé, mais vous devez enregistrer et activer le numéro de série NetApp associé à votre système.
 +
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-registering.html["Enregistrez les systèmes de paiement à l'utilisation dans Cloud Manager"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["Enregistrez les systèmes de paiement à l'utilisation dans Cloud Manager"^]
 
 
 
@@ -77,7 +77,7 @@ Remarques :
 
 . Le type de machine personnalisé est doté de 4 CPU virtuels et de 16 Go de mémoire. Pour plus de détails sur les types de machines standard, reportez-vous à https://cloud.google.com/compute/docs/machine-types#standard_machine_types["Google Cloud Documentation : types de machines"^].
 . Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
-. Les limites de disque vous empêchent d'atteindre la limite de capacité de 368 To en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de 368 To de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
+. Les limites de disque vous empêchent d'atteindre la limite de capacité de 368 To en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de 368 To de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
