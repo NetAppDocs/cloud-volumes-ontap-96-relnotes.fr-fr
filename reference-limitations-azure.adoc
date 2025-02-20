@@ -18,6 +18,12 @@ Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans 
 
 
 
+== Limites de l'utilisation des extensions de machines virtuelles Azure
+
+Dans un déploiement, Cloud Volumes ONTAP ne prend pas en charge les extensions de machines virtuelles et les applications de machines virtuelles Azure. L'utilisation d'Cloud Volumes ONTAP dans Azure avec des extensions de machine virtuelle entraîne des retards dans les opérations, et NetApp recommande de les éviter.
+
+
+
 == Les nouveaux déploiements ne sont pas pris en charge
 
 Les nouveaux déploiements de Cloud Volumes ONTAP 9.6 ne sont plus pris en charge dans Azure. Vous devez déployer Cloud Volumes ONTAP 9.7.
