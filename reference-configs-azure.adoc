@@ -66,7 +66,7 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 Remarques :
 
 . Les performances améliorées en écriture sont activées lors de l'utilisation de disques SSD, mais pas avec le type de machine virtuelle DS3_v2.
-. Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Pour la prise en charge des régions Azure, voir https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 
 
 
@@ -109,7 +109,7 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 |===
 Remarques :
 
-. Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Pour la prise en charge des régions Azure, voir https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 
 
 

@@ -94,7 +94,7 @@ Remarques :
 . L'amélioration des performances d'écriture est activée lorsque les SSD sont utilisés avec Cloud Volumes ONTAP Standard, Premium et BYOL.
 . Les SSD gp3 ne sont pas pris en charge.
 . Dans certaines configurations haute disponibilité, les limites de disque vous empêchent d'atteindre la limite de capacité de 368 Tio en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de 368 Tio de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
-. Pour la prise en charge de chaque région AWS, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Pour la prise en charge des régions AWS, voir https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 
 
 

@@ -81,7 +81,7 @@ Remarques :
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
-. Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Pour obtenir une prise en charge par région de Google Cloud Platform, consultezla section https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 
 
 
